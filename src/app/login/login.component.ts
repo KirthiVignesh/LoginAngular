@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 
 
 @Component({
@@ -13,17 +13,21 @@ import { RouterModule, Routes } from '@angular/router';
 // }
 
 
-export class LoginComponent {
+export class LoginComponent{
   loginFormEmail: FormGroup;
-  constructor(     private router: Router,) {
+  constructor(        private router: Router) {
     this.loginFormEmail = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required,Validators.minLength(8)])
     });
   }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   hide = true;
 
   onSubmit(){
+    console.log("click")
     this.router.navigate(['/home']);
   }
   getErrorMessage() {
