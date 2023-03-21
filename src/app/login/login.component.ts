@@ -21,13 +21,10 @@ export class LoginComponent{
       password: new FormControl('', [Validators.required,Validators.minLength(8)])
     });
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
   hide = true;
 
   onSubmit(){
-    console.log("click")
+    // console.log("click")
     this.router.navigate(['/home']);
   }
   getErrorMessage() {
@@ -38,7 +35,7 @@ export class LoginComponent{
     return this.loginFormEmail.get('email')?.hasError('email') ? 'Not a valid email':" ";
   }
   getErrorMessagePassword(){
-    return this.loginFormEmail.get('password')?.hasError('minLength') ? "Minimum length of password is 8":"Minimum length of password is 8";
+    return this.loginFormEmail.get('password')?.errors?.['minLength'] ? "Minimum length of password is 8":"Minimum length of password is 8";
 
   }
 }
