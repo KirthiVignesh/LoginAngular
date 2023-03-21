@@ -1,17 +1,19 @@
-section {
-    padding-top: 20px;
-  }
-  
-  .card-text {
-    width: 300px;
-  }
-  
-  .weather-data {
-    border: 1px solid#cbc9c9;
-    padding: 50px;
-    background-color: #f0f5f4;
-  }
-  
-  .temperature {
-    font-size: 35px;
-  }
+.login-form-flex {
+  display: flex;
+   justify-content: center;
+   align-items: center; 
+   margin: 15% auto;
+   height: 50%;
+   width: 30%;
+   background-color: lightsteelblue;
+ }
+ 
+ .button-flex-container {
+   display: flex;
+   width: 100%;
+   justify-content: flex-end;
+ } 
+
+.example-full-width {
+ width: 100%;
+}

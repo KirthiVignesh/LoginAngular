@@ -1,4 +1,22 @@
-<div>
-    <p>The current weather in your location is:</p>
-    <button (click)="getLocation()"> Get location</button>ng 
+<div class="login-form-flex">
+    <mat-card class="mat-elevation-z5">
+        <mat-card-header>
+            <mat-card-title>{{Tempdata.location}}</mat-card-title>
+            <mat-card-subtitle>{{Tempdata.desc}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            Current Temperature is {{Tempdata.temp}} °C
+            <br>
+            Current Relative Humidity is {{Tempdata.humidity}}%
+            <br>
+            Feels Like:{{Tempdata.temp_like}}
+            <br>
+            Minimum daily Temperature:{{Tempdata.min}} °C
+            <br>
+            Maximum daily Temperature:{{Tempdata.max}} °C
+        </mat-card-content>
+        <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="getLocation()"> Get Weather for Current Location</button>
+    </mat-card-actions>
+</mat-card>
 </div>
